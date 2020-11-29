@@ -14,19 +14,19 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  *
  */
+
+/**
+ * HAL PersistentStore for STM32F1
+ */
+
 #ifdef __STM32F1__
 
 #include "../../inc/MarlinConfig.h"
 
 #if USE_WIRED_EEPROM
-
-/**
- * PersistentStore for Arduino-style EEPROM interface
- * with simple implementations supplied by Marlin.
- */
 
 #include "../shared/eeprom_if.h"
 #include "../shared/eeprom_api.h"
@@ -68,7 +68,7 @@ bool PersistentStore::write_data(int &pos, const uint8_t *value, size_t size, ui
     crc16(crc, &v, 1);
     pos++;
     value++;
-  };
+  }
   return false;
 }
 
