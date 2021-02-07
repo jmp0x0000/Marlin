@@ -375,7 +375,7 @@
  */
 #define HOTEND_IDLE_TIMEOUT
 #if ENABLED(HOTEND_IDLE_TIMEOUT)
-  #define HOTEND_IDLE_TIMEOUT_SEC (5*60)    // (seconds) Time without extruder movement to trigger protection
+  #define HOTEND_IDLE_TIMEOUT_SEC (10*60)    // (seconds) Time without extruder movement to trigger protection
   #define HOTEND_IDLE_MIN_TRIGGER   180     // (°C) Minimum temperature to enable hotend protection
   #define HOTEND_IDLE_NOZZLE_TARGET   0     // (°C) Safe temperature for the nozzle after timeout
   #define HOTEND_IDLE_BED_TARGET      0     // (°C) Safe temperature for the bed after timeout
@@ -433,7 +433,7 @@
  * Define one or both of these to override the default 0-255 range.
  */
 // SET LIMITS TO ADDRESS VERY INTENSE COOLING OF 2 FANS
-#define FAN_MIN_PWM 50
+#define FAN_MIN_PWM 30
 #define FAN_MAX_PWM 128
 
 /**
